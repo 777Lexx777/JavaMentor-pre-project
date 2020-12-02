@@ -12,7 +12,7 @@ public interface UserDao {
 
     void removeUserById(long id);
 
-    List<User> getAllUsers();
+    List<User> getAllUsers( );
 
     void cleanUsersTable();
 }

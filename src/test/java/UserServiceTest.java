@@ -15,7 +15,7 @@ public class UserServiceTest {
     private final byte testAge = 5;
 
     @Test
-    public void dropUsersTable() {
+    public void dropUsersTable( ) {
         try {
             userService.dropUsersTable();
             userService.dropUsersTable();

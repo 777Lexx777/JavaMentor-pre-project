@@ -1,16 +1,21 @@
 package jdbc.model;
 
+
 import javax.persistence.*;
 
-@Table
+@Entity
+@Table(name = "user")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id",unique=true, nullable = false)
     private Long id;
-    @Column
+    @Column(name = "name")
     private String name;
-    @Column
+    @Column(name = "lastName")
     private String lastName;
-    @Column
+    @Column(name = "age")
     private Byte age;
 
     public User() {
@@ -58,8 +63,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                " name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 '}';

@@ -129,7 +129,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     @Override
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<>();
-        String sql = "SELECT name, lastName, age FROM users.users";
+        String sql = "SELECT name, lastName, age FROM users";
 
         try {
             statement = connection.createStatement();
